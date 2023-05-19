@@ -9,8 +9,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 100%;
-  padding: 19px 31px;
+  max-width: 100vh;
+  min-width: 60vw;
+  padding: 19px;
 }
 
 .innerBox {
@@ -24,4 +25,5 @@
 .footer nav a:hover {
   filter: brightness(150%);
   fill: #40a5f3;
+  color: #40a5f3;
 }
