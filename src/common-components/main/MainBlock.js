@@ -6,13 +6,12 @@ import Image from 'next/image';
 import CrygBlock from './CrygBlock';
 import DelBlock from './DelBlock';
 import Button from '@/shared-components/Button';
+import screenStatus from '@/utils/screenStatus';
 
 function MainBlock() {
   const rate = 700;
   const [crygState, setCrygState] = useState(1);
   const [delState, setDelState] = useState(() => parseFloat(crygState) * rate);
-  const [isMobile, setIsMobile] = useState(false);
-  const widthBreakPoint = 800;
 
   const changeCrygState = event => {
     setCrygState(event.target.value);
@@ -23,24 +22,7 @@ function MainBlock() {
     setDelState(del);
   }, [crygState]);
 
-  const changeStatus = () => {
-    if (window.innerWidth < widthBreakPoint) {
-      setIsMobile(true);
-    }
-    if (window.innerWidth > widthBreakPoint) {
-      setIsMobile(false);
-    }
-  };
-
-  useEffect(() => {
-    const onRecize = () => changeStatus();
-    window.addEventListener('resize', onRecize);
-    window.removeEventListener('resize', onRecize);
-  }, [widthBreakPoint, isMobile]);
-
-  useEffect(() => {
-    changeStatus();
-  }, [widthBreakPoint, isMobile]);
+  const mobile = screenStatus(800);
 
   return (
     <div className={styles.wrapper}>
@@ -76,8 +58,8 @@ function MainBlock() {
         <div className={styles.arrowButton}>
           <button>
             <Image
-              width={!isMobile ? 49 : 32}
-              height={!isMobile ? 49 : 32}
+              width={!mobile ? 49 : 32}
+              height={!mobile ? 49 : 32}
               src={'/images/arrow-button.png'}
               alt="arrow-button"
             />
