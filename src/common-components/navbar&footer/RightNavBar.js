@@ -20,7 +20,6 @@ function RightNavBar() {
             alt="language-img"
           />
           <span>RU</span>
-          {/* ? Add angle up icon to 'src' by condition ? */}
           <Image
             className={isShowLanguages ? 'expand' : ''}
             width={10}

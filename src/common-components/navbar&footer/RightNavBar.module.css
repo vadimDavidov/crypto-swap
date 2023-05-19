@@ -15,10 +15,6 @@
   cursor: pointer;
 }
 
-.switch:nth-last-child(-n + 1) {
-  margin-right: 0;
-}
-
 .switch img {
   margin-right: 4px;
 }
