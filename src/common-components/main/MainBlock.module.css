@@ -1,0 +1,83 @@
+.main {
+  max-width: 40vw;
+  height: auto;
+  padding: 20px;
+  background: linear-gradient(180deg, #222342 0%, rgba(34, 35, 66, 0) 100%);
+  filter: drop-shadow(0px 4px 40px rgba(0, 0, 0, 0.25));
+  border-radius: 20px;
+  margin: 50px auto;
+}
+
+.main nav {
+  margin-bottom: 20px;
+}
+
+.main nav > a:nth-child(1) {
+  font-weight: 600;
+  margin-right: 14px;
+}
+
+.main nav > a:nth-child(2) {
+  opacity: 0.3;
+}
+
+.actionBlock {
+  border-radius: 20px;
+  padding: 18px 24.5px;
+}
+
+.first {
+  background: rgba(255, 255, 255, 0.04) !important;
+  margin-bottom: 8px;
+}
+
+.second {
+  background: rgba(255, 255, 4255, 0.2) !important;
+  margin-bottom: 20px;
+}
+
+.centralBtn button {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.info {
+  background: rgba(25, 23, 47, 0.04);
+  border-radius: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  opacity: 0.7;
+}
+
+.info img {
+  margin-right: 12px;
+}
+
+.info span {
+  color: #40a5f3;
+}
+
+.arrowButton button {
+  background: transparent;
+  position: absolute;
+  border: none;
+  top: 38%;
+  left: 45%;
+}
+
+@media (max-width: 800px) {
+  .main {
+    max-width: 70vh;
+  }
+  .main nav {
+    font-size: 1rem;
+  }
+  .info {
+    font-size: 0.75rem;
+  }
+  .arrowButton button {
+    top: 39%;
+  }
+}

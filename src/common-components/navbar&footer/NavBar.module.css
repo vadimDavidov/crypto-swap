@@ -1,0 +1,22 @@
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1248px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+@media (max-width: 800px) {
+  .left {
+    display: none;
+  }
+  .wrapper {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 360px) {
+  .wrapper {
+    padding: 0 2px;
+  }
+}
