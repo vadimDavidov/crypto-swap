@@ -8,10 +8,14 @@ function MobileFooter() {
   const [isFocused, setIsfocused] = useState(false);
   const [focusColor, setFocusColor] = useState('');
 
-  const changeColor = () => {
-    const color = '#40a5f3';
+  const handleColor = color => {
     setFocusColor(color);
   };
+
+  useEffect(() => {
+    isFocused && handleColor('#40a5f3');
+    window.addEventListener('focus', handleColor);
+  }, [isFocused, focusColor]);
 
   return (
     <div className={styles.wrapper}>
@@ -22,7 +26,7 @@ function MobileFooter() {
               <Image
                 width={32}
                 height={32}
-                src="/icons/clockwise-focus.svg"
+                src="/icons/clockwise.svg"
                 alt="clockwise"
               />
             </Link>

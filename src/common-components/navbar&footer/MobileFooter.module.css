@@ -17,13 +17,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 16px;
+  padding: 18px;
 }
 
-.footer nav a:focus {
-  outline-style: none;
-  /* color: #40a5f3; */
-  color: #3a3b58;
+.footer nav a:focus,
+.footer nav a:hover {
   filter: brightness(150%);
-  fill-rule: nonzero;
+  fill: #40a5f3;
 }
