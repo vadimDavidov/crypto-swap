@@ -6,7 +6,7 @@ import Image from 'next/image';
 import CrygBlock from './CrygBlock';
 import DelBlock from './DelBlock';
 import Button from '@/shared-components/Button';
-import screenStatus from '@/utils/screenStatus';
+import getScreenStatus from '@/utils/getScreenStatus';
 
 function MainBlock() {
   const rate = 700;
@@ -22,7 +22,7 @@ function MainBlock() {
     setDelState(del);
   }, [crygState]);
 
-  const mobile = screenStatus(800);
+  const mobile = getScreenStatus(800);
 
   return (
     <div className={styles.wrapper}>

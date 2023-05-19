@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-function screenStatus(breakPoint) {
+function getScreenStatus(breakPoint) {
   const [isMobile, setIsMobile] = useState(false);
   const widthBreakPoint = breakPoint;
 
@@ -26,4 +26,4 @@ function screenStatus(breakPoint) {
   return isMobile;
 }
 
-export default screenStatus;
+export default getScreenStatus;
