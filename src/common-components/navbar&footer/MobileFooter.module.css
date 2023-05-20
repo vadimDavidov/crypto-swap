@@ -12,18 +12,25 @@
   max-width: 100vh;
   min-width: 60vw;
   padding: 19px;
+  position: relative;
 }
 
 .innerBox {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: end;
   padding: 18px;
 }
 
 .footer nav a:focus,
-.footer nav a:hover {
-  filter: brightness(150%);
-  fill: #40a5f3;
+.footer nav a:focus {
+  filter: brightness(200%);
   color: #40a5f3;
+  fill: #40a5f3;
+}
+
+.ellipse {
+  position: absolute;
+  top: -10px;
+  left: 12px;
 }

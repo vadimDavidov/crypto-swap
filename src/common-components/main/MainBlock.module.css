@@ -70,6 +70,7 @@
 @media (max-width: 800px) {
   .main {
     max-width: 70vh;
+    margin-top: 20px;
   }
   .main nav {
     font-size: 1rem;

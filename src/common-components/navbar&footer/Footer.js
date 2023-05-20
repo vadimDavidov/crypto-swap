@@ -1,4 +1,5 @@
 'use client';
+import { useState } from 'react';
 import DescTopFooter from './DescTopFooter';
 import MobileFooter from './MobileFooter';
 import getScreenStatus from '@/utils/getScreenStatus';

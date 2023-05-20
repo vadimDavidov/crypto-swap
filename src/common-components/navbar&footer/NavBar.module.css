@@ -13,10 +13,9 @@
   .wrapper {
     justify-content: center;
   }
-}
-
-@media (max-width: 360px) {
-  .wrapper {
-    padding: 0 2px;
+  .right {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
   }
 }

@@ -25,8 +25,8 @@
   opacity: 0.7;
 }
 
-.switch:nth-child(-n + 1) span {
-  margin-right: 6px;
+.switch:nth-child(1) {
+  margin-right: 0;
 }
 
 .languages {
@@ -37,8 +37,9 @@
   border-radius: 10px;
   position: absolute;
   top: 40px;
-  right: 205px;
+  right: 198px;
   padding: 10px 46px 10px 10px;
+  z-index: 1;
 }
 
 .languages a {
@@ -74,7 +75,7 @@
   }
 
   .languages {
-    right: 0;
+    right: -7px;
     flex-flow: column-reverse;
   }
 }

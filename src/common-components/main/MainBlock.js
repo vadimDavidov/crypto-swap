@@ -9,7 +9,7 @@ import Button from '@/shared-components/Button';
 import getScreenStatus from '@/utils/getScreenStatus';
 
 function MainBlock() {
-  const rate = 700;
+  const rate = 714.543;
   const [crygState, setCrygState] = useState(1);
   const [delState, setDelState] = useState(() => parseFloat(crygState) * rate);
 
