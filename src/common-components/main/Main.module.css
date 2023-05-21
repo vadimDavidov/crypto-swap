@@ -1,11 +1,10 @@
 .main {
   max-width: 40vw;
-  /* max-height: 10vh; */
   padding: 20px;
   background: linear-gradient(180deg, #222342 0%, rgba(34, 35, 66, 0) 100%);
   filter: drop-shadow(0px 4px 40px rgba(0, 0, 0, 0.25));
   border-radius: 20px;
-  margin: 35px auto;
+  margin: 35px auto 0 auto;
 }
 
 .main nav {
@@ -38,7 +37,7 @@
 
 .centralBtn button {
   width: 100%;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
 }
 
 .info {
@@ -63,7 +62,7 @@
   background: transparent;
   position: absolute;
   border: none;
-  top: 38%;
+  top: 39%;
   left: 45%;
 }
 
@@ -79,6 +78,6 @@
     font-size: 0.75rem;
   }
   .arrowButton button {
-    top: 39%;
+    top: 41%;
   }
 }
