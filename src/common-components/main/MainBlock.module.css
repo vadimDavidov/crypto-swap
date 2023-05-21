@@ -69,7 +69,7 @@
 
 @media (max-width: 800px) {
   .main {
-    max-width: 70vh;
+    max-width: 90vw;
     margin-top: 20px;
   }
   .main nav {
