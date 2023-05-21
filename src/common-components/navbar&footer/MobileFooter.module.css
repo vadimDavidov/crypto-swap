@@ -21,14 +21,6 @@
   align-items: end;
   padding: 18px;
 }
-
-/* .footer nav a:focus,
-.footer nav a:focus {
-  filter: brightness(200%);
-  color: #40a5f3;
-  fill: #40a5f3;
-} */
-
 .ellipseOne {
   position: absolute;
   top: 25px;

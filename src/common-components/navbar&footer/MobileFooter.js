@@ -3,7 +3,7 @@ import styles from './MobileFooter.module.css';
 import Link from 'next/link';
 import Image from 'next/image';
 import { svgIcons } from '@/utils-data/svgIcons';
-import { createRef, useEffect, useRef, useState } from 'react';
+import { useState } from 'react';
 
 function MobileFooter() {
   const icons = svgIcons();
@@ -49,12 +49,6 @@ function MobileFooter() {
     setQuesyionFocus(false);
   };
 
-  console.log(clockwiseFocus);
-  console.log(questionFocus);
-  console.log(documentFocus);
-  console.log(answerFocus);
-  console.log(languageFocus);
-
   return (
     <div className={styles.wrapper}>
       <div className={styles.footer}>
@@ -68,7 +62,6 @@ function MobileFooter() {
                 className={styles.ellipseOne}
                 width={6}
                 height={6}
-                // src="/icons/ellipse.svg"
                 src={
                   clockwiseFocus
                     ? '/icons/ellipse-focus.svg'
@@ -79,7 +72,6 @@ function MobileFooter() {
               <Image
                 width={32}
                 height={32}
-                // src="/icons/clockwise.svg"
                 src={clockwiseFocus ? icons[0].focusPath : icons[0].path}
                 alt="clockwise"
               />
@@ -91,7 +83,6 @@ function MobileFooter() {
                 className={styles.ellipseTwo}
                 width={6}
                 height={6}
-                // src="/icons/ellipse.svg"
                 src={
                   questionFocus
                     ? '/icons/ellipse-focus.svg'
@@ -102,7 +93,6 @@ function MobileFooter() {
               <Image
                 width={32}
                 height={32}
-                // src="/icons/question.svg"
                 src={questionFocus ? icons[1].focusPath : icons[1].path}
                 alt="question"
               />
@@ -114,7 +104,6 @@ function MobileFooter() {
                 className={styles.ellipseThree}
                 width={6}
                 height={6}
-                // src="/icons/ellipse.svg"
                 src={
                   documentFocus
                     ? '/icons/ellipse-focus.svg'
@@ -125,7 +114,6 @@ function MobileFooter() {
               <Image
                 width={32}
                 height={32}
-                // src="/icons/document.svg"
                 src={documentFocus ? icons[2].focusPath : icons[2].path}
                 alt="document"
               />
@@ -137,7 +125,6 @@ function MobileFooter() {
                 className={styles.ellipseFour}
                 width={6}
                 height={6}
-                // src="/icons/ellipse.svg"
                 src={
                   answerFocus
                     ? '/icons/ellipse-focus.svg'
@@ -148,7 +135,6 @@ function MobileFooter() {
               <Image
                 width={32}
                 height={32}
-                // src="/icons/answer.svg"
                 src={answerFocus ? icons[3].focusPath : icons[3].path}
                 alt="answer"
               />
@@ -160,7 +146,6 @@ function MobileFooter() {
                 className={styles.ellipseFive}
                 width={6}
                 height={6}
-                // src="/icons/ellipse.svg"
                 src={
                   languageFocus
                     ? '/icons/ellipse-focus.svg'
@@ -171,7 +156,6 @@ function MobileFooter() {
               <Image
                 width={32}
                 height={32}
-                // src="/icons/lang-footer.svg"
                 src={languageFocus ? icons[4].focusPath : icons[4].path}
                 alt="language"
               />
