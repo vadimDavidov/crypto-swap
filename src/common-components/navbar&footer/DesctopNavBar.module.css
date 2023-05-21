@@ -2,6 +2,7 @@
   display: flex;
   align-items: center;
   margin-top: 40px;
+  padding-left: 6px;
 }
 
 .logoGroup {
@@ -35,7 +36,16 @@
 }
 
 @media (max-width: 900px) {
-  .wrapper span:nth-last-child(-n + 1) {
+  /* .wrapper span:nth-last-child(-n + 1) {
     display: none;
+  } */
+  .logoGroup {
+    margin-right: 10px;
+  }
+  .logoGroup span {
+    font-size: 1rem;
+  }
+  .wrapper nav a {
+    margin-right: 10px;
   }
 }

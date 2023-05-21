@@ -1,10 +1,10 @@
 'use client';
-import styles from './RightNavBar.module.css';
+import styles from './MobileNavBar.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 
-function RightNavBar() {
+function MobileNavBar() {
   const [isShowLanguages, setIsShowLanguages] = useState(false);
 
   const toggleShowLanguages = () => setIsShowLanguages(prev => !prev);
@@ -50,4 +50,4 @@ function RightNavBar() {
   );
 }
 
-export default RightNavBar;
+export default MobileNavBar;

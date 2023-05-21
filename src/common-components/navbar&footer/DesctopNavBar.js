@@ -1,9 +1,8 @@
-import styles from './LeftNavBar.module.css';
-import { Fragment } from 'react';
+import styles from './DesctopNavBar.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
 
-function LeftNavBar() {
+function DesctopNavBar() {
   return (
     <div className={styles.wrapper}>
       <div className={styles.logoGroup}>
@@ -26,4 +25,4 @@ function LeftNavBar() {
   );
 }
 
-export default LeftNavBar;
+export default DesctopNavBar;
