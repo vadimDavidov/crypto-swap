@@ -49,7 +49,7 @@
   z-index: 1;
 }
 
-.languages a:focus-visible {
+.languages a:focus {
   outline-style: none;
   color: #40a5f3;
 }

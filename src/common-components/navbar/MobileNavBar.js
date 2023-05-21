@@ -2,10 +2,16 @@
 import styles from './MobileNavBar.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 
 function MobileNavBar() {
   const [isShowLanguages, setIsShowLanguages] = useState(false);
+
+  const languageFocus = useCallback(option => {
+    if (option) {
+      option.focus();
+    }
+  }, []);
 
   const toggleShowLanguages = () => setIsShowLanguages(prev => !prev);
 
@@ -30,14 +36,13 @@ function MobileNavBar() {
         </div>
         {isShowLanguages && (
           <div className={styles.languages}>
-            <Link href={'#'} autoFocus={true}>
+            <Link href={'#'} autoFocus={true} ref={languageFocus}>
               RU
             </Link>
             <Link href={'#'}>ENG</Link>
           </div>
         )}
       </div>
-
       <div className={styles.switch}>
         <Image width={18} height={18} src={'/images/nav.png'} alt="nav-img" />
         <span>Decimal</span>
