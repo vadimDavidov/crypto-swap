@@ -1,4 +1,4 @@
-import MainBlock from '@/common-components/main/MainBlock';
+import MainBlock from '@/common-components/main/Main';
 
 export default function Home() {
   return (

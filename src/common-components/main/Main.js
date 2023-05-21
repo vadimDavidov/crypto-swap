@@ -1,6 +1,6 @@
 'use client';
 import { useEffect, useState } from 'react';
-import styles from './MainBlock.module.css';
+import styles from './Main.module.css';
 import Link from 'next/link';
 import Image from 'next/image';
 import CrygBlock from './CrygBlock';
