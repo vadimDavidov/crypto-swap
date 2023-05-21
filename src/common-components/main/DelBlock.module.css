@@ -30,6 +30,7 @@
   font-weight: 600;
   font-size: 1.625rem;
   margin-right: 7.5px;
+  overflow: hidden;
 }
 
 .delBottom {
