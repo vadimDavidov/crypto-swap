@@ -7,75 +7,72 @@ import { createRef, useEffect, useRef, useState } from 'react';
 
 function MobileFooter() {
   const icons = svgIcons();
-  const clockwiseRef = createRef();
-  const questionRef = createRef();
-  const documentRef = createRef();
-  const answerRef = createRef();
-  const languageRef = createRef();
-  const ellipseRef = createRef();
-  const [hasFocus, setHasFocus] = useState(false);
+  const [clockwiseFocus, setClockwiseFocus] = useState(true);
+  const [questionFocus, setQuesyionFocus] = useState(false);
+  const [documentFocus, setDocumentFocus] = useState(false);
+  const [answerFocus, setAnswerFocus] = useState(false);
+  const [languageFocus, setLanguageFocus] = useState(false);
 
-  // useEffect(() => {
-  //   if (document.hasFocus() && ref.current.contains(document.activeElement)) {
-  //     setHasFocus(true);
-  //   }
-  // }, [hasFocus]);
+  const handleClockwiseFocus = () => {
+    setClockwiseFocus(true);
+    setAnswerFocus(false);
+    setDocumentFocus(false);
+    setLanguageFocus(false);
+    setQuesyionFocus(false);
+  };
+  const handleQuestionFocus = () => {
+    setClockwiseFocus(false);
+    setAnswerFocus(false);
+    setDocumentFocus(false);
+    setLanguageFocus(false);
+    setQuesyionFocus(true);
+  };
+  const handleDocumentFocus = () => {
+    setClockwiseFocus(false);
+    setAnswerFocus(false);
+    setDocumentFocus(true);
+    setLanguageFocus(false);
+    setQuesyionFocus(false);
+  };
+  const handleAnswerFocus = () => {
+    setClockwiseFocus(false);
+    setAnswerFocus(true);
+    setDocumentFocus(false);
+    setLanguageFocus(false);
+    setQuesyionFocus(false);
+  };
+  const handleLanguageFocus = () => {
+    setClockwiseFocus(false);
+    setAnswerFocus(false);
+    setDocumentFocus(false);
+    setLanguageFocus(true);
+    setQuesyionFocus(false);
+  };
 
-  // useEffect(() => {
-  //   if (document.activeElement === clockwiseRef.current) {
-  //     setHasFocus(true);
-  //   }
-  //   if (document.activeElement !== clockwiseRef.current) {
-  //     setHasFocus(false);
-  //   }
-
-  //   if (document.activeElement === questionRef.current) {
-  //     setHasFocus(true);
-  //   }
-  //   if (document.activeElement !== questionRef.current) {
-  //     setHasFocus(false);
-  //   }
-
-  //   if (document.activeElement === documentRef.current) {
-  //     setHasFocus(true);
-  //   }
-  //   if (document.activeElement !== documentRef.current) {
-  //     setHasFocus(false);
-  //   }
-  //   if (document.activeElement === languageRef.current) {
-  //     setHasFocus(true);
-  //   }
-  //   if (document.activeElement !== languageRef.current) {
-  //     setHasFocus(false);
-  //   }
-  // }, [
-  //   hasFocus,
-  //   clockwiseRef,
-  //   questionRef,
-  //   documentRef,
-  //   answerRef,
-  //   languageRef,
-  // ]);
-
-  console.log(hasFocus);
+  console.log(clockwiseFocus);
+  console.log(questionFocus);
+  console.log(documentFocus);
+  console.log(answerFocus);
+  console.log(languageFocus);
 
   return (
     <div className={styles.wrapper}>
       <div className={styles.footer}>
         <nav>
-          <div className={`${styles.innerBox} ${styles.clockwise}`}>
-            <Link
-              onClick={() => clockwiseRef.current}
-              ref={useRef(clockwiseRef.current)}
-              href={'#'}
-            >
+          <div
+            tabIndex={1}
+            className={`${styles.innerBox} ${styles.clockwise}`}
+          >
+            <Link onClick={() => handleClockwiseFocus()} href={'#'}>
               <Image
-                className={styles.ellipse}
+                className={styles.ellipseOne}
                 width={6}
                 height={6}
                 // src="/icons/ellipse.svg"
                 src={
-                  hasFocus ? '/icons/ellipse-focus.svg' : '/icons/ellipse.svg'
+                  clockwiseFocus
+                    ? '/icons/ellipse-focus.svg'
+                    : '/icons/ellipse.svg'
                 }
                 alt="ellipse"
               />
@@ -83,24 +80,22 @@ function MobileFooter() {
                 width={32}
                 height={32}
                 // src="/icons/clockwise.svg"
-                src={hasFocus ? icons[0].focusPath : icons[0].path}
+                src={clockwiseFocus ? icons[0].focusPath : icons[0].path}
                 alt="clockwise"
               />
             </Link>
           </div>
-          <div className={`${styles.innerBox} ${styles.question}`}>
-            <Link
-              onClick={() => questionRef.current}
-              ref={useRef(questionRef.current)}
-              href={'#'}
-            >
+          <div tabIndex={2} className={`${styles.innerBox} ${styles.question}`}>
+            <Link onClick={() => handleQuestionFocus()} href={'#'}>
               <Image
-                className={styles.ellipse}
+                className={styles.ellipseTwo}
                 width={6}
                 height={6}
                 // src="/icons/ellipse.svg"
                 src={
-                  hasFocus ? '/icons/ellipse-focus.svg' : '/icons/ellipse.svg'
+                  questionFocus
+                    ? '/icons/ellipse-focus.svg'
+                    : '/icons/ellipse.svg'
                 }
                 alt="ellipse"
               />
@@ -108,24 +103,22 @@ function MobileFooter() {
                 width={32}
                 height={32}
                 // src="/icons/question.svg"
-                src={hasFocus ? icons[1].focusPath : icons[1].path}
+                src={questionFocus ? icons[1].focusPath : icons[1].path}
                 alt="question"
               />
             </Link>
           </div>
-          <div className={`${styles.innerBox} ${styles.document}`}>
-            <Link
-              onClick={() => documentRef.current}
-              ref={useRef(documentRef.current)}
-              href={'#'}
-            >
+          <div tabIndex={3} className={`${styles.innerBox} ${styles.document}`}>
+            <Link onClick={() => handleDocumentFocus()} href={'#'}>
               <Image
-                className={styles.ellipse}
+                className={styles.ellipseThree}
                 width={6}
                 height={6}
                 // src="/icons/ellipse.svg"
                 src={
-                  hasFocus ? '/icons/ellipse-focus.svg' : '/icons/ellipse.svg'
+                  documentFocus
+                    ? '/icons/ellipse-focus.svg'
+                    : '/icons/ellipse.svg'
                 }
                 alt="ellipse"
               />
@@ -133,24 +126,22 @@ function MobileFooter() {
                 width={32}
                 height={32}
                 // src="/icons/document.svg"
-                src={hasFocus ? icons[2].focusPath : icons[2].path}
+                src={documentFocus ? icons[2].focusPath : icons[2].path}
                 alt="document"
               />
             </Link>
           </div>
-          <div className={`${styles.innerBox} ${styles.answer}`}>
-            <Link
-              onClick={() => answerRef.current}
-              ref={useRef(answerRef.current)}
-              href={'#'}
-            >
+          <div tabIndex={4} className={`${styles.innerBox} ${styles.answer}`}>
+            <Link onClick={() => handleAnswerFocus()} href={'#'}>
               <Image
-                className={styles.ellipse}
+                className={styles.ellipseFour}
                 width={6}
                 height={6}
                 // src="/icons/ellipse.svg"
                 src={
-                  hasFocus ? '/icons/ellipse-focus.svg' : '/icons/ellipse.svg'
+                  answerFocus
+                    ? '/icons/ellipse-focus.svg'
+                    : '/icons/ellipse.svg'
                 }
                 alt="ellipse"
               />
@@ -158,24 +149,22 @@ function MobileFooter() {
                 width={32}
                 height={32}
                 // src="/icons/answer.svg"
-                src={hasFocus ? icons[3].focusPath : icons[3].path}
+                src={answerFocus ? icons[3].focusPath : icons[3].path}
                 alt="answer"
               />
             </Link>
           </div>
-          <div className={`${styles.innerBox} ${styles.language}`}>
-            <Link
-              onClick={() => languageRef.current}
-              ref={useRef(languageRef.current)}
-              href={'#'}
-            >
+          <div tabIndex={5} className={`${styles.innerBox} ${styles.language}`}>
+            <Link onClick={() => handleLanguageFocus()} href={'#'}>
               <Image
-                className={styles.ellipse}
+                className={styles.ellipseFive}
                 width={6}
                 height={6}
                 // src="/icons/ellipse.svg"
                 src={
-                  hasFocus ? '/icons/ellipse-focus.svg' : '/icons/ellipse.svg'
+                  languageFocus
+                    ? '/icons/ellipse-focus.svg'
+                    : '/icons/ellipse.svg'
                 }
                 alt="ellipse"
               />
@@ -183,7 +172,7 @@ function MobileFooter() {
                 width={32}
                 height={32}
                 // src="/icons/lang-footer.svg"
-                src={hasFocus ? icons[4].focusPath : icons[4].path}
+                src={languageFocus ? icons[4].focusPath : icons[4].path}
                 alt="language"
               />
             </Link>

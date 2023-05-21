@@ -29,8 +29,28 @@
   fill: #40a5f3;
 } */
 
-.ellipse {
+.ellipseOne {
   position: absolute;
-  top: -10px;
-  left: 12px;
+  top: 25px;
+  left: 50px;
+}
+.ellipseTwo {
+  position: absolute;
+  top: 25px;
+  left: 121px;
+}
+.ellipseThree {
+  position: absolute;
+  top: 25px;
+  left: 190px;
+}
+.ellipseFour {
+  position: absolute;
+  top: 25px;
+  left: 259px;
+}
+.ellipseFive {
+  position: absolute;
+  top: 25px;
+  left: 327px;
 }
