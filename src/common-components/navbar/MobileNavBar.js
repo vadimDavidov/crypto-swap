@@ -36,7 +36,7 @@ function MobileNavBar() {
         </div>
         {isShowLanguages && (
           <div className={styles.languages}>
-            <Link href={'#'} autoFocus={true} ref={languageFocus}>
+            <Link href={'#'} ref={languageFocus}>
               RU
             </Link>
             <Link href={'#'}>ENG</Link>

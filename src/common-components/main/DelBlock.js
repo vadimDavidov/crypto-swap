@@ -16,7 +16,7 @@ function DelBlock({ value }) {
             alt="angle-down"
           />
         </div>
-        <span className={styles.delAmmount}>{value}</span>
+        <span className={styles.delAmmount}>{!value ? 0 : value}</span>
       </div>
       <div className={styles.delBottom}>
         <span>CRYG</span>

@@ -13,9 +13,10 @@
 
 .crygMiddle input {
   background: transparent;
-  max-width: 17%;
+  /* max-width: 17%; */
   border: none;
   color: #fff;
+  text-align: right;
 }
 
 .crygMiddle input:focus {

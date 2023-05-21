@@ -18,7 +18,7 @@ function MainBlock() {
   };
 
   useEffect(() => {
-    let del = (parseFloat(crygState).toFixed(3) * rate).toString();
+    let del = parseFloat(crygState).toFixed(3) * rate;
     setDelState(del);
   }, [crygState]);
 
