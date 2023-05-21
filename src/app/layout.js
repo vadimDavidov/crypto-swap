@@ -1,7 +1,7 @@
 import './globals.css';
-import NavBar from '@/common-components/navbar&footer/NavBar';
+import NavBar from '@/common-components/navbar/NavBar';
 import { Poppins } from 'next/font/google';
-import Footer from '@/common-components/navbar&footer/Footer';
+import Footer from '@/common-components/footer/Footer';
 
 export const poppins = Poppins({
   weight: '400',
