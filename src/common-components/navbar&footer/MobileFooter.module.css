@@ -11,38 +11,51 @@
   align-items: center;
   max-width: 100vh;
   min-width: 60vw;
-  padding: 19px;
-  position: relative;
+  padding: 22px;
 }
 
 .innerBox {
   display: flex;
   justify-content: center;
   align-items: end;
-  padding: 18px;
+  padding: 18px 12px;
+  position: relative;
 }
 .ellipseOne {
   position: absolute;
-  top: 25px;
-  left: 50px;
+  top: 6px;
+  left: 24px;
 }
 .ellipseTwo {
   position: absolute;
-  top: 25px;
-  left: 121px;
+  top: 6px;
+  left: 24px;
 }
 .ellipseThree {
   position: absolute;
-  top: 25px;
-  left: 190px;
+  top: 6px;
+  left: 24px;
 }
 .ellipseFour {
   position: absolute;
-  top: 25px;
-  left: 259px;
+  top: 6px;
+  left: 24px;
 }
 .ellipseFive {
   position: absolute;
-  top: 25px;
-  left: 327px;
+  top: 6px;
+  left: 24px;
+}
+
+@media (max-width: 800px) {
+  .footer {
+    max-width: 100%;
+    min-width: 90%;
+    display: flex;
+    justify-content: center;
+  }
+  .footer nav {
+    min-width: 100%;
+    justify-content: space-between;
+  }
 }
